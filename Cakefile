@@ -4,13 +4,7 @@ fs = require 'fs'
 {log, error} = console
 {minify} = require './node_modules/uglify-js'
 
-task 'uglify', 'Uglify js file', ->
-  ugly = minify path.resolve('./timezonedetect.js')
-  fs.writeFile path.resolve('./timezonedetect.min.js'), ugly.code, (err)->
-    throw err if err
-    log 'Written!'
-
-task 'doc', 'Generate doc in gh-pages branch', ->
+generateDoc = (done)->
   dir = path.resolve './'
   
   # Create a tmp directory
@@ -38,7 +32,22 @@ task 'doc', 'Generate doc in gh-pages branch', ->
             error err if err?
             log stdout
             
-            # Commit and push to gh-pages
-            exec "git commit -am 'Generated automatically'", {cwd:tmp}, (err, stdout, stderr)->
+            # Commit to gh-pages
+            exec "git add . && git commit -am 'Generated automatically'", {cwd:tmp}, (err, stdout, stderr)->
               error err if err?
               log stdout
+              
+              # Push to gh-pages
+              exec "git push origin gh-pages", {cwd:tmp}, (err, stdout, stderr)->
+                error err if err?
+                log stdout
+
+task 'uglify', 'Uglify js file', ->
+  ugly = minify path.resolve('./timezonedetect.js')
+  fs.writeFile path.resolve('./timezonedetect.min.js'), ugly.code, (err)->
+    throw err if err
+    log 'Written!'
+
+task 'doc', 'Generate doc in gh-pages branch', ->
+  generateDoc()
+
