@@ -18,7 +18,7 @@
     "mocha"   : "~1.0.3",
     "should"  : "~0.6.3",
     "coffee-script" : "latest",
-    "uglify-js" : "latest"
+    "uglify-js" : "https://github.com/dsimard/UglifyJS2/tarball/better-require"
   },
   "engines": {
     "node": "*"

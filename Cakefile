@@ -2,7 +2,8 @@
 path = require 'path'
 fs = require 'fs'
 {log, error} = console
-{minify} = require './node_modules/uglify-js/tools/node'
+#{minify} = require './node_modules/uglify-js/tools/node'
+{minify} = require './node_modules/uglify-js'
 
 task 'uglify', 'Uglify js file', ->
   ugly = minify path.resolve('./timezonedetect.js')
