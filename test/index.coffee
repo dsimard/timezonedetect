@@ -1,5 +1,5 @@
 should = require 'should'
-tz = require '../src/jskata.timezone.js'
+tz = require '../timezonedetect.js'
 {equal, ok} = require 'assert'
 
 jsk = {tz:tz}
