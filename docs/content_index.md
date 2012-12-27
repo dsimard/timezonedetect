@@ -1,5 +1,5 @@
 ##Documentation
 
-[jskata.timezone](src/jskata.timezone.js.html)
+[timezonedetect.js](timezonedetect.js.html)
 
 

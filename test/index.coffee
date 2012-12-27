@@ -2,8 +2,6 @@ should = require 'should'
 tz = require '../timezonedetect.js'
 {equal, ok} = require 'assert'
 
-jsk = {tz:tz}
-
 describe 'Timezone', ->
   it 'is north america - eastern time', ->
     tz.testOffset(300, 240);
@@ -17,65 +15,65 @@ describe 'Timezone', ->
     tz.stToString(':').should.equal '-05:00'
     
   it 'north america - St John (30 minute offset)', ->
-    jsk.tz.testOffset(210, 150);
-    equal(jsk.tz.stToString(), "-0330")
-    equal(jsk.tz.dstToString(), "-0230")
+    tz.testOffset(210, 150);
+    equal(tz.stToString(), "-0330")
+    equal(tz.dstToString(), "-0230")
     
     # Set time separator
-    jsk.tz.timeSeparator = "|"
-    equal(jsk.tz.stToString(), "-03|30")
-    equal(jsk.tz.stToString(":"), "-03:30")
-    jsk.tz.timeSeparator = ""
+    tz.timeSeparator = "|"
+    equal(tz.stToString(), "-03|30")
+    equal(tz.stToString(":"), "-03:30")
+    tz.timeSeparator = ""
     
   it "Australia - Dysney", ->
-    jsk.tz.testOffset(-660, -600)
-    ok(jsk.tz.hasDst())
-    ok(jsk.tz.st() != jsk.tz.dst())
-    equal(jsk.tz.invertedSt(), -600)
-    equal(jsk.tz.st(), 600)
+    tz.testOffset(-660, -600)
+    ok(tz.hasDst())
+    ok(tz.st() != tz.dst())
+    equal(tz.invertedSt(), -600)
+    equal(tz.st(), 600)
   
   it "Argentina - San Luis - no DST", ->
-    jsk.tz.testOffset(180, 180);
-    ok(!jsk.tz.hasDst());
-    ok(jsk.tz.st() == jsk.tz.dst());
+    tz.testOffset(180, 180);
+    ok(!tz.hasDst());
+    ok(tz.st() == tz.dst());
   
   it "Brazil - Sao Paulo", ->
-    jsk.tz.testOffset(120, 180);
-    ok(jsk.tz.hasDst());
-    ok(jsk.tz.st() != jsk.tz.dst());
+    tz.testOffset(120, 180);
+    ok(tz.hasDst());
+    ok(tz.st() != tz.dst());
   
   it "Hong Kong - no DST", ->
-    jsk.tz.testOffset(-480, -480);
-    ok(!jsk.tz.hasDst());
-    ok(jsk.tz.st() == jsk.tz.dst());
+    tz.testOffset(-480, -480);
+    ok(!tz.hasDst());
+    ok(tz.st() == tz.dst());
   
   it "London", ->
-    jsk.tz.testOffset(0, -60);
-    ok(jsk.tz.hasDst());
-    ok(jsk.tz.st() != jsk.tz.dst());
-    equal(jsk.tz.stToString(), "+0000");
+    tz.testOffset(0, -60);
+    ok(tz.hasDst());
+    ok(tz.st() != tz.dst());
+    equal(tz.stToString(), "+0000");
   
   
   it "Africa - Ouagadougou", ->
-    jsk.tz.testOffset(0, 0);
-    ok(!jsk.tz.hasDst());
-    ok(jsk.tz.st() == jsk.tz.dst());
-    equal(jsk.tz.stToString(), "+0000");
-    equal(jsk.tz.stToString(), jsk.tz.dstToString());
+    tz.testOffset(0, 0);
+    ok(!tz.hasDst());
+    ok(tz.st() == tz.dst());
+    equal(tz.stToString(), "+0000");
+    equal(tz.stToString(), tz.dstToString());
   
   
   it "Time separator", ->
-    jsk.tz.testOffset(300, 240);
+    tz.testOffset(300, 240);
     
-    jsk.tz.timeSeparator = ',';
-    equal(jsk.tz.stToString(':'), "-05:00");
-    equal(jsk.tz.stToString(), "-05,00");
+    tz.timeSeparator = ',';
+    equal(tz.stToString(':'), "-05:00");
+    equal(tz.stToString(), "-05,00");
     
-    jsk.tz.timeSeparator = '';
-    equal(jsk.tz.stToString(), "-0500");
+    tz.timeSeparator = '';
+    equal(tz.stToString(), "-0500");
     
-    jsk.tz.timeSeparator = null;
-    equal(jsk.tz.stToString(), "-0500");
+    tz.timeSeparator = null;
+    equal(tz.stToString(), "-0500");
     
   it 'defines aliases', ->
     tz.hasDst.should.equal tz.hasDaylightSavingTime
@@ -90,14 +88,14 @@ describe 'Timezone', ->
     tz.isDst.should.equal tz.isDaylightSavingTime
     
   it 'returns if a date is standard time', ->
-    jsk.tz.isSt(new Date(2012, 1, 1), 300).should.be.true
-    jsk.tz.isSt(new Date(2012, 7, 1), 240).should.be.false
+    tz.isSt(new Date(2012, 1, 1), 300).should.be.true
+    tz.isSt(new Date(2012, 7, 1), 240).should.be.false
     
   it 'returns if a date is daylight saving time', ->
-    jsk.tz.isDst(new Date(2012, 1, 1), 300).should.be.false
-    jsk.tz.isDst(new Date(2012, 7, 1), 240).should.be.true
+    tz.isDst(new Date(2012, 1, 1), 300).should.be.false
+    tz.isDst(new Date(2012, 7, 1), 240).should.be.true
     
   it "is not dst if no dst", ->
-    jsk.tz.testOffset(0, 0);
-    jsk.tz.isDst(new Date(2012, 1, 1), 0).should.be.false
-    jsk.tz.isDst(new Date(2012, 7, 1), 0).should.be.false
+    tz.testOffset(0, 0);
+    tz.isDst(new Date(2012, 1, 1), 0).should.be.false
+    tz.isDst(new Date(2012, 7, 1), 0).should.be.false

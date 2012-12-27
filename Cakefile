@@ -30,7 +30,7 @@ task 'doc', 'Generate doc in gh-pages branch', ->
         log stdout
         
         # Create doc        
-        exec 'docco-husky src/', (err, stdout, stderr)->
+        exec 'docco-husky timezonedetect.js', (err, stdout, stderr)->
           error err if err?
           log stdout
           
