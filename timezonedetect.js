@@ -1,4 +1,4 @@
-// ## Standard time, daylight saving time in time zones
+// ## Detect the standard time, the daylight saving time for the current time zone
 (function() {
   var jsk = {
 
