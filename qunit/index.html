@@ -76,7 +76,7 @@ $(document).ready(function(){
     equal(jsk.tz.stToString(), "+0000");
   });
   
-  test("Africa - Ouagadougou - hi to my ex-coworker Yaya!", function() {
+  test("Africa - Ouagadougou", function() {
     jsk.tz.testOffset(0, 0);
     ok(!jsk.tz.hasDst());
     ok(jsk.tz.st() == jsk.tz.dst());
