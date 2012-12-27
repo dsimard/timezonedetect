@@ -2,7 +2,7 @@
 
 ## Detect the standard time, the daylight saving time for the time zone
 
-[![Build Status](https://secure.travis-ci.org/dsimard/jskata.png?branch=2012-12-02_Node)](https://travis-ci.org/dsimard/jskata)
+[![Build Status](https://travis-ci.org/dsimard/timezonedetect.png?branch=master)](https://travis-ci.org/dsimard/timezonedetect)
 
     if (DetectTimezone.hasDaylightSavingTime()) {
       console.log('You have daylight saving time in your timezone');
