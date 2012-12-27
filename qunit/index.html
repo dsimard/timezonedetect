@@ -5,7 +5,7 @@
   <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
   <link rel="stylesheet" href="qunit.css" type="text/css" media="screen" />
   <script type="text/javascript" src="qunit.js"></script>
-  <script type="text/javascript" src="../src/jskata.timezone.js"></script>
+  <script type="text/javascript" src="../timezonedetect.js"></script>
 </head>
 <body>
  <h1 id="qunit-header">jsKata.timezone</h1>
@@ -17,6 +17,7 @@ $(document).ready(function(){
   test("test namespace", function() {
     ok(_.tz !== undefined);
     ok(javascriptKataDotCom.timezone !== undefined);
+    deepEqual(jsk.tz, TimezoneDetect, 'Use the new namespace');
   });
   
   test("north america - eastern time", function() {
@@ -76,7 +77,7 @@ $(document).ready(function(){
     equal(jsk.tz.stToString(), "+0000");
   });
   
-  test("Africa - Ouagadougou - hi to my ex-coworker Yaya!", function() {
+  test("Africa - Ouagadougou", function() {
     jsk.tz.testOffset(0, 0);
     ok(!jsk.tz.hasDst());
     ok(jsk.tz.st() == jsk.tz.dst());

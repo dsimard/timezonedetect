@@ -1,23 +1,31 @@
 {
   "author": "dsimard <dsimard@azanka.ca>",
-  "name": "jskata",
-  "description": "independent javascript libraries from JavascriptKata.com",
-  "keywords": ["timezone", "date"],
-  "version": "0.4.0",
+  "name": "timezonedetect",
+  "description": "",
+  "keywords": ["timezone", "date", "daylight saving time", "standard time"],
+  "version": "0.0.1",
   "preferGlobal": "false",
   "repository": {
     "type": "git",
-    "url": "git@github.com:dsimard/jskata.git"
+    "url": "git@github.com:dsimard/timezonedetect.git"
   },
   "scripts": {
     "test": "node ./node_modules/.bin/mocha --compilers coffee:coffee-script test/*.coffee"
   },
+  "dependencies": {
+  },
   "devDependencies": {
     "mocha"   : "~1.0.3",
     "should"  : "~0.6.3",
-    "coffee-script" : "latest"
+    "coffee-script" : "latest",
+    "uglify-js" : "~2.2.2"
   },
   "engines": {
     "node": "*"
+  },
+  "docco_husky": {
+    "output_dir": "docco-husky",
+    "content_dir": "docs",
+    "project_name": "TimezoneDetect"
   }
 }
