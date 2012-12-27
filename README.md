@@ -13,7 +13,7 @@
     console.log('Your standard time zone offset in second is ' + jsk.tz.standardTime());
     console.log('Your standard time zone offset is : ' + jsk.tz.standardTimeToString());
     
-See the complete documentation in [timezonedetect.js](timezonedetect.js.html)
+See the complete documentation in [timezonedetect.js](http://dsimard.github.com/timezonedetect/timezonedetect.js.html)
 
 ## Install
 
