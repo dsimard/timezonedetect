@@ -168,6 +168,9 @@
   
   // Creates the base namespaces
   if (typeof window !== 'undefined') {
+    window.TimezoneDetect = jsk;
+  
+    // This is for backward compatibility (see https://github.com/dsimard/jskata)
     if (window.javascriptKataDotCom === undefined) { window.javascriptKataDotCom = {}; }
     if (window.jsKata === undefined) { window.jsKata = window.javascriptKataDotCom; }
     if (window.jskata === undefined) { window.jskata = window.javascriptKataDotCom; }
