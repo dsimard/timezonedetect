@@ -15,6 +15,12 @@
     
 See the complete documentation in [timezonedetect.js](http://dsimard.github.com/timezonedetect/timezonedetect.js.html)
 
+## Testimonial
+
+> Finally, timezones in javascript done right. The world has been made a better place via this fine javascript library.
+
+_Garry Tan_, Partner with Y Combinator. Cofounder of Posterous. ([source](http://axonflux.com/finally-timezones-in-javascript-done-right))
+
 ## Install
 
 To __install for a website__, copy `timezonedetect.min.js` with the other javascript files of your project and include it.
