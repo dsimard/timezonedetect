@@ -20,7 +20,7 @@ See the complete documentation in [timezonedetect.js](http://dsimard.github.com/
 To __install for a website__, copy `timezonedetect.min.js` with the other javascript files of your project and include it.
 
 
-To __install in a Node.js__ project `npm install timezonedetect`
+_(Later)_ To __install in a Node.js__ project `npm install timezonedetect`
 
 ## Contribute
 
