@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/dsimard/timezonedetect.png?branch=master)](https://travis-ci.org/dsimard/timezonedetect)
 
-    if (DetectTimezone.hasDaylightSavingTime()) {
+    if (timezonedetect.hasDaylightSavingTime()) {
       console.log('You have daylight saving time in your timezone');
     } else {
       console.log('You DO NOT have daylight saving time in your timezone');
