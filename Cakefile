@@ -40,3 +40,6 @@ task 'doc', 'Generate doc in gh-pages branch', ->
             log stdout
             
             # Commit and push to gh-pages
+            exec "git commit -am 'Generated automatically'", {cwd:tmp}, (err, stdout, stderr)->
+              error err if err?
+              log stdout
