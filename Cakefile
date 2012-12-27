@@ -1,6 +1,14 @@
 {exec} = require 'child_process'
 path = require 'path'
+fs = require 'fs'
 {log, error} = console
+{minify} = require './node_modules/uglify-js/tools/node'
+
+task 'uglify', 'Uglify js file', ->
+  ugly = minify path.resolve('./timezonedetect.js')
+  fs.writeFile path.resolve('./timezonedetect.min.js'), ugly.code, (err)->
+    throw err if err
+    log 'Written!'
 
 task 'doc', 'Generate doc in gh-pages branch', ->
   dir = path.resolve './'
