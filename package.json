@@ -26,6 +26,6 @@
   "docco_husky": {
     "output_dir": "docco-husky",
     "content_dir": "docs",
-    "project_name": "jskata"
+    "project_name": "TimezoneDetect"
   }
 }
