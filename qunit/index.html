@@ -17,6 +17,7 @@ $(document).ready(function(){
   test("test namespace", function() {
     ok(_.tz !== undefined);
     ok(javascriptKataDotCom.timezone !== undefined);
+    deepEqual(jsk.tz, TimezoneDetect, 'Use the new namespace');
   });
   
   test("north america - eastern time", function() {
