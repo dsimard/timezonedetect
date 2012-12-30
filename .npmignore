@@ -1,7 +1,11 @@
+docco-husky
 docs
 node_modules
+qunit
 test
 Cakefile
 README.md
 .travis.yml
 .gitignore
+Cakefile
+.npmignore
