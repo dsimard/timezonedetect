@@ -3,8 +3,7 @@
   "name": "timezonedetect",
   "description": "",
   "keywords": ["timezone", "date", "daylight saving time", "standard time"],
-  "version": "0.0.1",
-  "preferGlobal": "false",
+  "version": "0.5.0",
   "main": "./timezonedetect",
   "repository": {
     "type": "git",
@@ -21,6 +20,7 @@
     "coffee-script" : "latest",
     "uglify-js" : "~2.2.2"
   },
+  "license" : "MIT", 
   "engines": {
     "node": "*"
   },
