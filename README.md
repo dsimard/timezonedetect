@@ -26,7 +26,7 @@ _Garry Tan_, Partner with Y Combinator. Cofounder of Posterous. ([source](http:/
 To __install for a website__, copy `timezonedetect.min.js` with the other javascript files of your project and include it.
 
 
-_(Later)_ To __install in a Node.js__ project `npm install timezonedetect`
+To __install in a Node.js__ project `npm install timezonedetect`
 
 ## Contribute
 
