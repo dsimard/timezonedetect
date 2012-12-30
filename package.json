@@ -5,6 +5,7 @@
   "keywords": ["timezone", "date", "daylight saving time", "standard time"],
   "version": "0.0.1",
   "preferGlobal": "false",
+  "main": "./timezonedetect",
   "repository": {
     "type": "git",
     "url": "git@github.com:dsimard/timezonedetect.git"
