@@ -1,7 +1,7 @@
 {
   "author": "dsimard <dsimard@azanka.ca>",
   "name": "timezonedetect",
-  "description": "",
+  "description": "Detect the standard time, the daylight saving time for the time zone",
   "keywords": ["timezone", "date", "daylight saving time", "standard time"],
   "version": "0.4.0",
   "main": "./timezonedetect",
